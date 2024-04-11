@@ -21,22 +21,24 @@ public class Demo002 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
+        // variable donde almaceno el valor que ingresa el usuario
         short valor;
+        // lectura del numero
         System.out.println("Ingrese un valor:");
         System.out.println("a) Del 1 al 5: Mensaje Original");
         System.out.println("b) Menor a 1 o Mayor a 5: Mensaje en Mayusculas");
         valor = sc.nextShort();
-        
+        // variables donde se encuentra el mensaje original
         String mensaje = Mensaje.obtenerMensaje();
         int habitantes = Informacion.obtenerHabitantes() ;
-        
+        // verifica que el numero sea del 1 al 5
         if (valor >= 1 && valor <=5) {
             System.out.printf(" %scon %d\n ", mensaje
-                ,habitantes );
-        } else {
-            mensaje = mensaje.toUpperCase();
+                ,habitantes ); // imprime el mensaje original
+        } else { // si el numero es menor a 1 o mayor a 5 
+            mensaje = mensaje.toUpperCase(); // convertimos el mensaje a mayus.
             System.out.printf(" %scon %d\n ", mensaje
-                ,habitantes );
+                ,habitantes ); // imprimo el mensaje en mayusculas
         }
         
         
